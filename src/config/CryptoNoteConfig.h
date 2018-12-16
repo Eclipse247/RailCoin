@@ -16,13 +16,13 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint64_t DIFFICULTY_TARGET                             = 30; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 200; // seconds
 
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 3914525;
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 40;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 584885;
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 6;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3         = 3 * DIFFICULTY_TARGET;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V4         = 6 * DIFFICULTY_TARGET;
@@ -31,22 +31,22 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(100000000000000);
-const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 187000;
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(509999999999999999);
+const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 0;
 const size_t   ZAWY_DIFFICULTY_V2                            = 0;
-const uint8_t  ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION      = 3;
+const uint8_t  ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION      = 1;
 
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 620000;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 700000;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 800000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 2;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 3;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 1000000;
 
 const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 1200000;
 
-const unsigned EMISSION_SPEED_FACTOR                         = 25;
+const unsigned EMISSION_SPEED_FACTOR                         = 20;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Premine amount */
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(20400000000000000);
 
 /* How to generate a premine:
 
@@ -68,7 +68,7 @@ TurtleCoind --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BP
 * You should see your premine appear in the previously generated wallet.
 
 */
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff000188f3b501029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210142694232c5b04151d9e4c27d31ec7a68ea568b19488cfcb422659a07a0e44dd5";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121010415b3382ad4e6c7db9034ec518a12e03eaa6367afd6944d9d3ff5fff5e50ada";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
@@ -85,22 +85,22 @@ const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 
 const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 2;
 
-const uint64_t MINIMUM_FEE                                   = UINT64_C(10);
+const uint64_t MINIMUM_FEE                                   = UINT64_C(350);
 
 /* This section defines our minimum and maximum mixin counts required for transactions */
-const uint64_t MINIMUM_MIXIN_V1                              = 0;
-const uint64_t MAXIMUM_MIXIN_V1                              = 100;
+const uint64_t MINIMUM_MIXIN_V1                              = 3;
+const uint64_t MAXIMUM_MIXIN_V1                              = 3;
 
-const uint64_t MINIMUM_MIXIN_V2                              = 7;
-const uint64_t MAXIMUM_MIXIN_V2                              = 7;
+const uint64_t MINIMUM_MIXIN_V2                              = 3;
+const uint64_t MAXIMUM_MIXIN_V2                              = 3;
 
 const uint64_t MINIMUM_MIXIN_V3                              = 3;
 const uint64_t MAXIMUM_MIXIN_V3                              = 3;
 
 /* The heights to activate the mixin limits at */
-const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 440000;
-const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 620000;
-const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 800000;
+const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 1;
+const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 1;
+const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 1;
 
 /* The mixin to use by default with zedwallet and turtle-service */
 /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
@@ -109,11 +109,11 @@ const uint64_t DEFAULT_MIXIN_V1                              = MAXIMUM_MIXIN_V1;
 const uint64_t DEFAULT_MIXIN_V2                              = MAXIMUM_MIXIN_V2;
 const uint64_t DEFAULT_MIXIN_V3                              = MAXIMUM_MIXIN_V3;
 
-const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(10);
+const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(0);
 const uint64_t DEFAULT_DUST_THRESHOLD_V2                     = UINT64_C(0);
 
 const uint32_t DUST_THRESHOLD_V2_HEIGHT                      = MIXIN_LIMITS_V2_HEIGHT;
-const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2               = 800000;
+const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2               = 0;
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
 
 const size_t   DIFFICULTY_WINDOW                             = 17;
@@ -150,7 +150,7 @@ const uint32_t KEY_IMAGE_CHECKING_BLOCK_INDEX                = 0;
 
 const uint32_t UPGRADE_HEIGHT_V2                             = 1;
 const uint32_t UPGRADE_HEIGHT_V3                             = 2;
-const uint32_t UPGRADE_HEIGHT_V4                             = 350000; // Upgrade height for CN-Lite Variant 1 switch.
+const uint32_t UPGRADE_HEIGHT_V4                             = 1; // Upgrade height for CN-Lite Variant 1 switch.
 const uint32_t UPGRADE_HEIGHT_CURRENT                        = UPGRADE_HEIGHT_V4;
 
 const unsigned UPGRADE_VOTING_THRESHOLD                      = 90;               // percent
@@ -162,18 +162,11 @@ static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 /* Block heights we are going to have hard forks at */
 const uint64_t FORK_HEIGHTS[] =
 {
-    187000,  // 0
-    350000,  // 1
-    440000,  // 2
-    620000,  // 3
-    700000,  // 4
-    800000,  // 5
-    1000000, // 6
-    1200000, // 7
-    1400000, // 8
-    1600000, // 9
-    1800000, // 10
-    2000000, // 11
+    37428,  // 0
+    74457,  // 1
+    111485,  // 2
+    148513,  // 3
+    185542,  // 4
 };
 
 /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
@@ -197,10 +190,10 @@ const char     CRYPTONOTE_BLOCKS_FILENAME[]                  = "blocks.bin";
 const char     CRYPTONOTE_BLOCKINDEXES_FILENAME[]            = "blockindexes.bin";
 const char     CRYPTONOTE_POOLDATA_FILENAME[]                = "poolstate.bin";
 const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
-const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
+const char     MINER_CONFIG_FILE_NAME[]                      = "Railminer_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "TurtleCoin";
+const char     CRYPTONOTE_NAME[]                             = "RailCoin";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -218,8 +211,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  11897;
-const int      RPC_DEFAULT_PORT                              =  11898;
+const int      P2P_DEFAULT_PORT                              =  6030;
+const int      RPC_DEFAULT_PORT                              =  6031;
 const int      SERVICE_DEFAULT_PORT                          =  8070;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
@@ -233,7 +226,7 @@ const uint8_t  P2P_MINIMUM_VERSION                           = 2;
 // warning messages that we need to upgrade our software.
 const uint8_t  P2P_UPGRADE_WINDOW                            = 2;
 
-const size_t   P2P_CONNECTION_MAX_WRITE_BUFFER_SIZE          = 32 * 1024 * 1024; // 32 MB
+const size_t   P2P_CONNECTION_MAX_WRITE_BUFFER_SIZE          = 64 * 1024 * 1024; // 32 MB
 const uint32_t P2P_DEFAULT_CONNECTIONS_COUNT                 = 8;
 const size_t   P2P_DEFAULT_WHITELIST_CONNECTIONS_PERCENT     = 70;
 const uint32_t P2P_DEFAULT_HANDSHAKE_INTERVAL                = 60;            // seconds
@@ -254,13 +247,11 @@ const char     LATEST_VERSION_URL[]                          = "http://latest.tu
 const std::string LICENSE_URL                                = "https://github.com/turtlecoin/turtlecoin/blob/master/LICENSE";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
-    {  0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x57, 0x41, 0x65, 0xf9, 0x91, 0xa4, 0xb6, 0xc1, 0x43, 0xe9  }
+    { 0xb2, 0X48, 0X4f, 0X4d, 0X41, 0x57, 0X53, 0X47, 0X4f, 0X4f, 0x65, 0X4f, 0X49, 0xb6, 0X53, 0xe9 }
 };
 
 const char* const SEED_NODES[] = {
-  "206.189.142.142:11897",//rock
-  "145.239.88.119:11999", //cision
-  "142.44.242.106:11897", //tom
-  "165.227.252.132:11897" //iburnmycd
+  "142.93.33.81:6030", //Eclipse247
+  "206.189.125.99:6030" //Eclipse247
 };
 } // CryptoNote
