@@ -255,8 +255,6 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 const char* const SEED_NODES[] = {
   "142.93.47.121:6030", //Eclipse-Railcoind1
   "209.97.132.217:6030" //Eclipse247-Railcoind2
-  "167.99.87.87:6030"  //Testnet-Railcoin1
-  "167.99.204.129:6030"  //Testnet-Railcoin2
 
 };
 } // CryptoNote
