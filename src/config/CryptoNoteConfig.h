@@ -21,7 +21,7 @@ const uint64_t DIFFICULTY_TARGET                             = 150; // seconds
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 584885;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 617653;
 const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 6;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3         = 3 * DIFFICULTY_TARGET;
@@ -68,7 +68,7 @@ TurtleCoind --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BP
 * You should see your premine appear in the previously generated wallet.
 
 */
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121010415b3382ad4e6c7db9034ec518a12e03eaa6367afd6944d9d3ff5fff5e50ada";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121014e387f03decdca25cf7743dd44d0f33a13c61de095ba0de6a0de7d5b6d4d13e4";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
@@ -192,10 +192,10 @@ const char     CRYPTONOTE_BLOCKS_FILENAME[]                  = "blocks.bin";
 const char     CRYPTONOTE_BLOCKINDEXES_FILENAME[]            = "blockindexes.bin";
 const char     CRYPTONOTE_POOLDATA_FILENAME[]                = "poolstate.bin";
 const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
-const char     MINER_CONFIG_FILE_NAME[]                      = "Railminer_conf.json";
+const char     MINER_CONFIG_FILE_NAME[]                      = "Railtest_miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "RailCoin";
+const char     CRYPTONOTE_NAME[]                             = "Railtest";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -213,8 +213,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  6030;
-const int      RPC_DEFAULT_PORT                              =  6031;
+const int      P2P_DEFAULT_PORT                              =  21425;
+const int      RPC_DEFAULT_PORT                              =  21426;
 const int      SERVICE_DEFAULT_PORT                          =  8070;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
@@ -253,8 +253,8 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 };
 
 const char* const SEED_NODES[] = {
-  "142.93.47.121:6030", //Eclipse-Railcoind1
-  "209.97.132.217:6030" //Eclipse247-Railcoind2
+  "167.99.87.87:21425"  //Testnet-Railcoin1
+  "167.99.204.129:21425"  //Testnet-Railcoin2
 
 };
 } // CryptoNote
