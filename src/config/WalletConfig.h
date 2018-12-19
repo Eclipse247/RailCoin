@@ -10,7 +10,7 @@
 namespace WalletConfig
 {
     /* The prefix your coins address starts with */
-    const std::string addressPrefix = "XRA1";
+    const std::string addressPrefix = "XRA2";
 
     /* Your coins 'Ticker', e.g. Monero = XMR, Bitcoin = BTC */
     const std::string ticker = "XRA";
@@ -23,14 +23,14 @@ namespace WalletConfig
     const std::string addressBookFilename = ".addressBook.json";
 
     /* The name of your deamon */
-    const std::string daemonName = "RailCoind";
+    const std::string daemonName = "Railtestd";
 
     /* The name to call this wallet */
-    const std::string walletName = "Railwallet";
+    const std::string walletName = "Railtestwallet";
 
     /* The name of service/walletd, the programmatic rpc interface to a
        wallet */
-    const std::string walletdName = "Railcoin-service";
+    const std::string walletdName = "Railtest-service";
 
     /* The full name of your crypto */
     const std::string coinName = std::string(CryptoNote::CRYPTONOTE_NAME);
