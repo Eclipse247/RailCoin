@@ -192,7 +192,7 @@ const char     CRYPTONOTE_BLOCKS_FILENAME[]                  = "blocks.bin";
 const char     CRYPTONOTE_BLOCKINDEXES_FILENAME[]            = "blockindexes.bin";
 const char     CRYPTONOTE_POOLDATA_FILENAME[]                = "poolstate.bin";
 const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
-const char     MINER_CONFIG_FILE_NAME[]                      = "Railtest_miner_conf.json";
+const char     MINER_CONFIG_FILE_NAME[]                      = "Railtestminer_conf.json";
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "Railtest";
