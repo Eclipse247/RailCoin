@@ -253,7 +253,7 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 };
 
 const char* const SEED_NODES[] = {
-  "167.99.87.87:21425"  //Testnet-Railcoin1
+  "167.99.87.87:21425",  //Testnet-Railcoin1
   "167.99.204.129:21425"  //Testnet-Railcoin2
 
 };
