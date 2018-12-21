@@ -20,7 +20,7 @@ namespace WalletConfig
 
     /* The filename to read+write the address book to - consider starting with
        a leading '.' to make it hidden under mac+linux */
-    const std::string addressBookFilename = ".addressBook.json";CryptoNoteConfig.h
+    const std::string addressBookFilename = ".addressBook.json";
 
     /* The name of your deamon */
     const std::string daemonName = "Railtestd";
