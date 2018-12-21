@@ -77,7 +77,7 @@ static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) !
 const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1512800692;
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
-const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block size
+const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block sizehttps://github.com/Eclipse247/RailCoin.git
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 20000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
@@ -120,7 +120,7 @@ const size_t   DIFFICULTY_WINDOW                             = 17;
 const size_t   DIFFICULTY_WINDOW_V1                          = 2880;
 const size_t   DIFFICULTY_WINDOW_V2                          = 2880;
 const uint64_t DIFFICULTY_WINDOW_V3                          = 60;
-const uint64_t DIFFICULTY_BLOCKS_COUNT_V3                    = DIFFICULTY_WINDOW_V3 + 1;
+const uint64_t DIFFICULTY_BLOCKS_COUNT_V3         https://github.com/Eclipse247/RailCoin.git           = DIFFICULTY_WINDOW_V3 + 1;
 
 const size_t   DIFFICULTY_CUT                                = 0;  // timestamps to cut after sorting
 const size_t   DIFFICULTY_CUT_V1                             = 60;
