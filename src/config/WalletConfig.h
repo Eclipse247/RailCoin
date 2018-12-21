@@ -20,7 +20,7 @@ namespace WalletConfig
 
     /* The filename to read+write the address book to - consider starting with
        a leading '.' to make it hidden under mac+linux */
-    const std::string addressBookFilename = ".addressBook.json";
+    const std::string addressBookFilename = ".addressBook.json";CryptoNoteConfig.h
 
     /* The name of your deamon */
     const std::string daemonName = "Railtestd";
@@ -46,7 +46,7 @@ namespace WalletConfig
 
     /* The length of a standard address for your coin */
     const long unsigned int standardAddressLength = 99;
-•••••••••••••
+
     /* The length of an integrated address for your coin - It's the same as
        a normal address, but there is a paymentID included in there - since
        payment ID's are 64 chars, and base58 encoding is done by encoding
