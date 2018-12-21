@@ -26,7 +26,7 @@ namespace WalletConfig
     const std::string daemonName = "Railtestd";
 
     /* The name to call this wallet */
-    const std::string walletName = "Railtestwallet";
+    const std::string walletName = "Railwallet";
 
     /* The name of service/walletd, the programmatic rpc interface to a
        wallet */
@@ -46,7 +46,7 @@ namespace WalletConfig
 
     /* The length of a standard address for your coin */
     const long unsigned int standardAddressLength = 99;
-
+•••••••••••••
     /* The length of an integrated address for your coin - It's the same as
        a normal address, but there is a paymentID included in there - since
        payment ID's are 64 chars, and base58 encoding is done by encoding
